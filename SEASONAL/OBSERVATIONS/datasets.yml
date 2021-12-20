@@ -39,7 +39,7 @@ sources:
       limits:
         start: 252
         end: -1
-        units: days since 1960-01-01
+        units: months since 1960-01-01
         calendar: standard
     args:
       path: '{{ CATALOG_DIR }}/UCSB.yml'
