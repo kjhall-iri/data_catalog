@@ -1,0 +1,207 @@
+sources: 
+  SPSv3p5:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Seasonal Prediction System, Version 3.5 (SPSv3.5). The System is based on a coupled Ocean-Atmosphere Global Climate Model, complemented by a number of additional modules. The System is operated monthly in Ensemble seasonal mode (6-month predictions) and is completed by a database of monthly ensemble hindcasts covering the period 1993-2016 which can be used to evaluate the performance of the System and to apply bias removal techniques from operational forecasts
+    metadata:
+      info: https://www.cmcc.it/wp-content/uploads/2020/09/TN0288-csp-09-2020-1.pdf
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.CMCC/.SPSv3p5/
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        start: 729
+        end: -1
+        units: months since 1960-01-01
+        calendar: 360_day
+      institution: EuroMediterranean Center for Climate Change (CMCC)
+
+    args:
+      path: '{{ CATALOG_DIR }}/CMCCSPS3p5.yml'
+  
+  SPSv3p0:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Seasonal Prediction System
+    metadata:
+      version: 3.0
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.CMCC/.SPSv3/
+      info: https://www.cmcc.it/wp-content/uploads/2017/12/rp0285-csp-10-2017.pdf
+      institution: EuroMediterranean Center for Climate Change (CMCC)
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        start: 706
+        end: 728
+        units: months since 1960-01-01
+        calendar: 360_day
+    args:
+      path: '{{ CATALOG_DIR }}/CMCCSPS3p0.yml'
+
+  GCFS2p0:
+    description: The German Climate Forecast System (GCFS) is a joint project between Hamburg University (UHH), the Max Planck Institute for Meteorology (MPI-M) and the Deutscher Wetterdienst (DWD). It is the first system in Germany that generates worldwide seasonal forecasts on a routine basis and makes them available to the public.
+    metadata:
+      version: 2.0
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.DWD/.GCFS2p0/
+      info: https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html
+      institution: Deutscher Wetterdienst (DWD) 
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        start: 706
+        end: 729
+        units: months since 1960-01-01
+        calendar: 360_day
+
+    driver: intake.catalog.local.YAMLFileCatalog
+    args:
+      path: '{{ CATALOG_DIR }}/DWDGCFS2p0.yml'
+  
+  GCFS2p1:
+    description: The German Climate Forecast System (GCFS) is a joint project between Hamburg University (UHH), the Max Planck Institute for Meteorology (MPI-M) and the Deutscher Wetterdienst (DWD). It is the first system in Germany that generates worldwide seasonal forecasts on a routine basis and makes them available to the public.
+    metadata:
+      version: 2.1
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.DWD/.GCFS2p1/
+      info: https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html
+      institution: Deutscher Wetterdienst (DWD) 
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        start: 730
+        end: -1
+        units: months since 1960-01-01
+        calendar: 360_day
+
+    driver: intake.catalog.local.YAMLFileCatalog
+    args:
+      path: '{{ CATALOG_DIR }}/DWDGCFS2p1.yml'
+
+  SEAS5:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: The fifth generation of the ECMWF seasonal forecasting system, SEAS5, was introduced in November 2017, replacing System 4. SEAS5 includes updated versions of the atmospheric (IFS) and ocean (NEMO) models and adds the interactive sea ice model LIM2.
+    metadata:  
+      info: https://www.ecmwf.int/en/forecasts/documentation-and-support/long-range
+      institution: European Center For Mid-Range Weather Forecasting (ECMWF)
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.ECMWF/.SEAS5/
+      version: 5.0
+      hindcast_limits:
+        start: 252
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        start: 692
+        end: -1
+        units: months since 1960-01-01
+        calendar: 360_day
+    args: 
+      path: '{{ CATALOG_DIR }}/ECMWFSEAS5.yml'
+
+  CPS2:
+    description: JMA/MRI-CPS2 has various upgrades from its predecessor, JMA/MRI-CPS1, including improved resolution and physics in its atmospheric and oceanic components, introduction of an interactive sea-ice model and realistic initialization of its land component. Verification of extensive re-forecasts covering a 30-year period (1981–2010) demonstrates that JMA/MRI-CPS2 possesses improved seasonal predictive skills for both atmospheric and oceanic interannual variability as well as key coupled variability such as the El Niño–Southern Oscillation (ENSO). For ENSO prediction, the new system better represents the forecast uncertainty and transition/duration of ENSO phases.
+    metadata:
+      instituion: Japanese Metorological Agency (JMA)
+      info: https://confluence.ecmwf.int/display/CKB/Description+of+cps2-v20150526+C3S+contribution
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.JMA/.CPS2/
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        units: months since 1960-01-01
+        calendar: 360_day
+        start: 729
+        end: -1
+    driver: intake.catalog.local.YAMLFileCatalog
+    args: 
+      path: '{{ CATALOG_DIR }}/JMACPS2.yml'
+  
+  METEOFRANCE7:
+    description: The 7th Long-Range Seasonal Forecasting System from Meteo France
+    metadata: 
+      institution: Meteo France 
+      hindcast_limits:
+        start: 396
+        units: months since 1960-01-01
+        calendar: 360_day
+        end: 683
+      forecast_limits:
+        start: 717
+        end: 737
+        units: months since 1960-01-01
+        calendar: 360_day
+      info: https://confluence.ecmwf.int/display/CKB/Description+of+System7-v20190301+C3S+contribution
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.Meteo_France/.System7/
+    driver: intake.catalog.local.YAMLFileCatalog
+    args: 
+      path: '{{ CATALOG_DIR }}/METEOFRANCE7.yml'
+
+  METEOFRANCE8:
+    metadata: 
+      institution: Meteo France 
+      info: https://confluence.ecmwf.int/display/CKB/Description+of+System7-v20190301+C3S+contribution
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.Meteo_France/.System8/
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        units: months since 1960-01-01
+        calendar: 360_day
+        start: 738
+        end: -1
+    description: The 8th Long-Range Seasonal Forecasting System from Meteo France
+    driver: intake.catalog.local.YAMLFileCatalog
+    args: 
+      path: '{{ CATALOG_DIR }}/METEOFRANCE8.yml'
+
+  GLOSEA5:
+    description: UK Met Office Global Seasonal forecast system version 5 (GloSea5). GloSea5 upgrades include an increase in horizontal resolution in the atmosphere (N216–0.7°) and the ocean (0.25°), and implementation of a 3D-Var assimilation system for ocean and sea-ice conditions.
+    metadata:
+      intitution: United Kingdom Meteorological Office (UKMO)
+      info: https://confluence.ecmwf.int/display/CKB/UKMO+Forecast+System
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.UKMO/.GloSea5-GC2/.System15/
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        units: months since 1960-01-01
+        calendar: 360_day
+        start: 724
+        end: 733
+    driver: intake.catalog.local.YAMLFileCatalog
+    args: 
+      path: '{{ CATALOG_DIR }}/UKMOGLOSEA5.yml'
+
+  GLOSEA6:
+    description: GloSea6 is the seasonal prediction system developed and run operationally at the Met Office. GloSea6 stands for Met Office Global Seasonal Forecasting System version 6.  GloSea6 is an ensemble prediction system built around the high resolution version of the Met Office climate prediction model - HadGEM3 family atmosphere—land—ocean—sea-ice coupled climate model. 
+    metadata:
+      intitution: United Kingdom Meteorological Office (UKMO)
+      info: https://www.metoffice.gov.uk/research/climate/seasonal-to-decadal/gpc-outlooks/user-guide/global-seasonal-forecasting-system-glosea6
+      iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.UKMO/.GloSea6-GC2/.System600/
+      hindcast_limits:
+        start: 396
+        end: 683
+        units: months since 1960-01-01
+        calendar: 360_day
+      forecast_limits:
+        units: months since 1960-01-01
+        calendar: 360_day
+        start: 734
+        end: -1
+    driver: intake.catalog.local.YAMLFileCatalog
+    args: 
+      path: '{{ CATALOG_DIR }}/UKMOGLOSEA6.yml'

@@ -1,0 +1,22 @@
+sources:
+  NMME:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: The North American Multi-Model Ensemble (NMME) is an experimental multi-model seasonal forecasting system consisting of coupled models from US modeling centers including NOAA/NCEP, NOAA/GFDL, IRI, NCAR, NASA, and Canada's CMC. The Phase-I NMME project in 2011 was funded as a CTB Project by NOAA Climate Program Office Modeling, Analysis, Predictions and Projections (MAPP) Program. The Phase-II NMME project was funded as a 2-year (2012-2013) inter-agency project by NOAA, NSF, DOE and NASA. When using the NMME data, please cite the BAMS article describing the project (Kirtman et al. 2014), and in the acknowledgements please note that the NMME project and data dissemination is supported by NOAA, NSF, NASA, and DOE. Please acknowledge the help of CPC, IRI, and NCAR personnel in creating, updating, and maintaining the NMME archive.
+    info: https://www.cpc.ncep.noaa.gov/products/NMME/Kirtman_etal_2014.pdf
+    iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/
+    args:
+      path: '{{ CATALOG_DIR }}/NMME/models.yml'
+  
+  C3S:
+    driver: intake.catalog.local.YAMLFileCatalog
+    info: https://confluence.ecmwf.int/display/CKB/C3S+Seasonal+Forecasts%3A+datasets+documentation
+    iri: https://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/
+    description: C3S is one of six thematic information services provided by the Copernicus Earth Observation Programme of the European Union. Copernicus is an operational programme building on existing research infrastructures and knowledge available in Europe and elsewhere. C3S relies on climate research carried out within the World Climate Research Programme (WCRP) and responds to user requirements defined by the Global Climate Observing System (GCOS). C3S provides an important resource to the Global Framework for Climate Services (GFCS). C3S is implemented by the European Centre for Medium-Range Weather Forecasts (ECMWF) on behalf of the European Commission. ECMWF is an independent intergovernmental organisation serving its Member and Co-operating States and the broader community. This repository of C3S data is served by the IRI Data Library. 
+    args:
+      path: '{{ CATALOG_DIR }}/C3S/models.yml'
+  
+  OBSERVED:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: A Collection of observational datasets from numerous places, including ENACTS, CPC, ERSST, TRMM, and even localized weather observing stations.
+    args:
+      path: '{{ CATALOG_DIR }}/OBSERVATIONS/datasets.yml'

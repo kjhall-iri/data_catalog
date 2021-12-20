@@ -1,0 +1,8 @@
+sources: 
+  SST:
+    driver: seasonalobsdriver
+    metadata:
+      id_code: 184
+    args: 
+      observed: http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCDC/.ERSST/.version5/.sst/T/%28Jan%201982%29/%28Dec%202021%29/RANGE/T/%28{fdate.month}%201982-2021%29/VALUES/T/12/STEP/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/-999/setmissing_value/{'%5BX/Y%5D%5BT%5D/' + filetype if filetype == 'cptv10.tsv' else 'data.nc'},
+      units: degrees Kelvin 

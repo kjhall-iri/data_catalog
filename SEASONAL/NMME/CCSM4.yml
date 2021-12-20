@@ -1,0 +1,101 @@
+sources:
+  PRCP:
+    driver: seasonaldriver
+    metadata:
+      id_code: 91
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.prec/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/30/mul/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.prec/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/30/mul/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: mm/month
+
+
+  RFREQ: 
+    driver: seasonaldriver
+    metadata:
+      id_code: 92
+    args: 
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.prec/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.prec/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: mm/day
+
+
+  T2M:
+    driver: seasonaldriver
+    metadata:
+      id_code: 93
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.tref/Z/2/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}     
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.tref/Z/2/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: degrees Kelvin
+
+
+  SST:
+    driver: seasonaldriver
+    metadata:
+      id_code: 94
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.sst/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.sst/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: degrees Kelvin
+
+
+  GPH:
+    driver: seasonaldriver
+    metadata:
+      id_code: 95
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.gz/P/{pressure}/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.gz/P/{pressure}/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: meters
+      pressure_levels: [200]
+
+
+  EVAP:
+    driver: seasonaldriver
+    metadata:
+      id_code: 96
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.evap/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.evap/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: kgs-3
+
+
+  RUNOFF:
+    driver: seasonaldriver
+    metadata:
+      id_code: 97
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.runoff/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.runoff/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: kgs-3
+
+
+  SOILW:
+    driver: seasonaldriver
+    metadata:
+      id_code: 98
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.soilw/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.soilw/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: kgm-2
+
+
+  TMAX:
+    driver: seasonaldriver
+    metadata:
+      id_code: 99
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.tsmx/Z/2/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.tsmx/Z/2/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype}
+      units: degrees Kelvin
+
+
+  TMIN:
+    driver: seasonaldriver
+    metadata:
+      id_code: 100
+    args:
+      hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.tsmn/Z/2/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype} 
+      forecast: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/.MONTHLY/.tsmx/Z/2/VALUES/S/%280000%201%20{threeletters[fdate.month]}%20{first_year}-{final_year}%29/VALUES/L/{lead_low}/{lead_high}/RANGEEDGES/%5BL%5D//keepgrids/average/Y/{predictor_extent.south}/{predictor_extent.north}/RANGEEDGES/X/{predictor_extent.west}/{predictor_extent.east}/RANGEEDGES/%5BM%5D/average/-999/setmissing_value/{'%5BX/Y%5D%5BL/S/add%5D/' + filetype if filetype == 'cptv10.tsv' else filetype} 
+      units: degrees Kelvin
+

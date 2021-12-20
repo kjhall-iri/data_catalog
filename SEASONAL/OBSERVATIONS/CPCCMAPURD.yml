@@ -1,0 +1,8 @@
+sources:
+  PRCP:
+    driver: seasonalobsdriver
+    metadata:
+      id_code: 178
+    args:
+      observed: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CPC-CMAP-URD/prate/T/(1%20Jan%20{first_year})/(31%20Dec%20{final_year})/RANGE/T/%28{target}%20{first_year}-{final_year}%29/seasonalAverage/Y/{predictand_extent.south}/{predictand_extent.north}/RANGEEDGES/X/{predictand_extent.west}/{predictand_extent.east}/RANGEEDGES/-999/setmissing_value/{'%5BX/Y%5D%5BT%5D' + filetype if filetype == 'cptv10.tsv' else 'data.nc'}
+      units: mm/month

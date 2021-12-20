@@ -1,0 +1,22 @@
+sources:
+  ECMWF:
+    description: ECMWF's contribution to the S2S database hosted at the IRI
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata:
+      info: https://confluence.ecmwf.int/display/S2S/ECMWF+Model
+      institution: European Center for Mid-Range Weather Forecasting (ECMWF)
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/
+      forecasts: "Monday & Thursday"
+      hindcasts: "On-The-Fly"
+    args: 
+      path: "{{ CATALOG_DIR }}/ECMWF.yml"
+
+  CFSv2:
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata:
+      institution: National Oceanic and Atmospheric Administration (NOAA) National Center for Envrionmental Prediction (NCEP)
+      info: https://www.cpc.ncep.noaa.gov/products/CFSv2/CFSv2_body.html
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.NCEP-CFSv2/
+    description: CFSv2 is NCEP's contribution to the S2S Prediction project
+    args: 
+      path: '{{ CATALOG_DIR }}/CFSV2.yml'

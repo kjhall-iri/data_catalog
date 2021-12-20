@@ -1,0 +1,17 @@
+sources:
+  SUBX:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: The Subseasonal Experiment (SubX) is a NOAA/Climate Testbed project focused on subseasonal predictability and predictions. Seven global models are producing seventeen years of ensemble retrospecive forecasts initialized weekly to investigate subseasonal prediction and predictability. Additionally, one-year of real-time predictions will be produced and provided to the NOAA/NWS Climate Prediction Center as additional guidance for their week-3/4 outlooks. Each modeling group follows the SubX Protocol for their re-forecasts and real-time forecasts. The project will test the skill of individual prediction systems as well as multi-model combinations.
+    info: http://cola.gmu.edu/subx/data/modelinfo.html
+    iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/
+    args:
+      path: '{{ CATALOG_DIR }}/SUBX/models.yml'
+  
+  S2S:
+    driver: intake.catalog.local.YAMLFileCatalog
+    info: https://www.ecmwf.int/en/research/projects/s2s
+    iri: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/
+    description: S2S, sub-seasonal to seasonal prediction project, is a WWRP/THORPEX-WCRP joint research project established to improve forecast skill and understanding on the sub-seasonal to seasonal time scale, and promote its uptake by operational centres and exploitation by the applications community.
+    args:
+      path: '{{ CATALOG_DIR }}/S2S/models.yml'
+  

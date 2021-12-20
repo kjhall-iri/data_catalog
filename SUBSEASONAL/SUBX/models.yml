@@ -1,0 +1,86 @@
+sources: 
+  CCSM4:
+    metadata:
+      institution: University of Miami Rosenstiel School of Marine and Atmospheric Science (RSMAS)
+      info: https://climate.rsmas.miami.edu/research/subseasonal-to-seasonal-prediction/index.html
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.RSMAS/.CCSM4/
+      hindcasts: 'Wednesday, Thursday'
+      forecasts: 'Sunday'
+    description: Community Climate System Model version 4.0 (CCSM4)  contribution to the SubX project. 
+    driver: intake.catalog.local.YAMLFileCatalog
+    args: 
+      path: '{{ CATALOG_DIR }}/CCSM4.yml'
+
+  GEOS2p1:
+    metadata:
+      institution: National Aeronautics & Space Administration (NASA) Global Modeling and Assimilation Office (GMAO) 
+      info: https://gmao.gsfc.nasa.gov/cgi-bin/products/climateforecasts/geos5/
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.GMAO/.GEOS_V2p1/
+      hindcasts: 'Every 5 Days intersecting 1 Jan 1999'
+      forecasts: 'Every 5 Days intersecting 7 Nov 2021'
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: The NASA GMAO Goddard Earth Observing System (GEOS) Atmosphere-Ocean General Circulation Model and Data Assimilation System Version S2S_2.1 contribution to the SubX project. 
+    args: 
+      path: '{{ CATALOG_DIR }}/GEOSv2p1.yml'
+
+  NESM:
+    metadata:
+      institution: Naval Research Laboratory (NRL)
+      info: http://cola.gmu.edu/subx/data/models.html#NAVY
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.NRL/.NESM/
+      hindcasts: 'Saturday, Sunday, Monday, Tuesday'
+      forecasts: 'Saturday, Sunday, Monday, Tuesday'
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Navy Earth System Model (NESM) is the Navy Research Lab's contribution to the SubX Project. 
+    args: 
+      path: '{{ CATALOG_DIR }}/NESM.yml'
+  
+  GEPS6: 
+    metadata:
+      institution: Environment and Climate Change Canada (ECCC)
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.ECCC/.GEPS6/
+      info: http://cola.gmu.edu/subx/data/models.html#EC
+      hindcasts: 'on-the-fly'
+      forecasts: 'Thursday'
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: GEPS6 is the ECCC's contribution to the SubX Project
+    args: 
+      path: '{{ CATALOG_DIR }}/GEPS6.yml'
+
+  GEFSv12:
+    metadata:
+      institution: NOAA Environmental Modeling Center (EMC)
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.EMC/.GEFSv12/
+      info: https://www.emc.ncep.noaa.gov/users/meg/gefsv12/
+      hindcasts: 'Wednesday'
+      forecasts: 'Wednesday'
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: GEFSv12 is the EMC's contribution to the SubX Project
+    args: 
+      path: '{{ CATALOG_DIR }}/GEFSv12.yml'
+
+  FIMr1p1:
+    metadata:
+      institution: NOAA Earth Systems Research Laboratories
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.ESRL/.FIMr1p1/
+      info: https://fim.noaa.gov/
+      hindcasts: 'Wednesday'
+      forecasts: 'Wednesday'
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: FIMr1p1 is the ECCC's contribution to the SubX Project
+    args: 
+      path: '{{ CATALOG_DIR }}/FIM.yml'
+
+  CFSv2:
+    metadata:
+      institution: National Oceanic and Atmospheric Administration (NOAA) National Center for Envrionmental Prediction (NCEP)
+      info: https://www.cpc.ncep.noaa.gov/products/CFSv2/CFSv2_body.html
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.NCEP/.CFSv2/
+      hindcasts: "blah"
+      forecasts: "blah"
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: CFSv2 is NCEP's contribution to the SubX Project
+    args: 
+      path: '{{ CATALOG_DIR }}/CFSV2.yml'
+  
+
