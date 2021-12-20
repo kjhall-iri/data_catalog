@@ -28,6 +28,21 @@ sources:
         calendar: standard
     args:
       path: '{{ CATALOG_DIR }}/ENACTSBD_IRI.yml'
+      
+  UCSB:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: University of California at Santa Barbara climate observations datasets
+    metadata: 
+      iri: https://iri.columbia.edu/SOURCES/.UCSB/
+      info: https://www.chc.ucsb.edu/data/chirps
+      institution: UCSB
+      limits:
+        start: 252
+        end: -1
+        units: days since 1960-01-01
+        calendar: standard
+    args:
+      path: '{{ CATALOG_DIR }}/UCSB.yml'
 
   CPC:
     driver: intake.catalog.local.YAMLFileCatalog
