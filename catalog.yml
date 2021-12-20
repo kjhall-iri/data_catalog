@@ -12,3 +12,10 @@ sources:
     description: A collection of subseasonal (weekly, daily) climate model datasets and observations, commonly used for forecasting on the "subseasonal-to-seasonal" (S2S) time scale.
     args:
       path: '{{ CATALOG_DIR }}/SUBSEASONAL/projects.yml'
+      
+  test:
+    version: 0.1
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: A collection of subseasonal (weekly, daily) climate model datasets and observations, commonly used for forecasting on the "subseasonal-to-seasonal" (S2S) time scale.
+    args:
+      path: '{{ CATALOG_DIR }}/SUBSEASONAL/projects.yml'
