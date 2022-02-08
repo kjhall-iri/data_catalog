@@ -6,6 +6,12 @@ sources:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.RSMAS/.CCSM4/
       hindcasts: 'Wednesday, Thursday'
       forecasts: 'Sunday'
+      hindcast_limits:
+        start: '1999-01-07' 
+        end: '2016-12-31'  
+      forecast_limits:
+        start: '2017-06-25' 
+        end: -1 
     description: Community Climate System Model version 4.0 (CCSM4)  contribution to the SubX project. 
     driver: intake.catalog.local.YAMLFileCatalog
     args: 
@@ -18,6 +24,12 @@ sources:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.GMAO/.GEOS_V2p1/
       hindcasts: 'Every 5 Days intersecting 1 Jan 1999'
       forecasts: 'Every 5 Days intersecting 7 Nov 2021'
+      hindcast_limits:
+        start: '1999-01-01'
+        end: '2016-12-27' 
+      forecast_limits:
+        start: '2017-07-25'
+        end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: The NASA GMAO Goddard Earth Observing System (GEOS) Atmosphere-Ocean General Circulation Model and Data Assimilation System Version S2S_2.1 contribution to the SubX project. 
     args: 
@@ -30,6 +42,12 @@ sources:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.NRL/.NESM/
       hindcasts: 'Saturday, Sunday, Monday, Tuesday'
       forecasts: 'Saturday, Sunday, Monday, Tuesday'
+      hindcast_limits:
+        start: '1999-01-02'
+        end: '2016-12-31' 
+      forecast_limits:
+        start: '2017-08-05'
+        end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: Navy Earth System Model (NESM) is the Navy Research Lab's contribution to the SubX Project. 
     args: 
@@ -42,10 +60,34 @@ sources:
       info: http://cola.gmu.edu/subx/data/models.html#EC
       hindcasts: 'on-the-fly'
       forecasts: 'Thursday'
+      hindcast_limits:
+        start: '1998-01-03'
+        end: '2017-12-27' 
+      forecast_limits:
+        start: '2019-06-27'
+        end: '2021-12-02'
     driver: intake.catalog.local.YAMLFileCatalog
     description: GEPS6 is the ECCC's contribution to the SubX Project
     args: 
       path: '{{ CATALOG_DIR }}/GEPS6.yml'
+
+  GEPS7: 
+    metadata:
+      institution: Environment and Climate Change Canada (ECCC)
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.ECCC/.GEPS7/
+      info: http://cola.gmu.edu/subx/data/models.html#EC
+      hindcasts: 'on-the-fly'
+      forecasts: 'Thursday'
+      hindcast_limits:
+        start: '2001-01-01'
+        end: '2020-12-31' 
+      forecast_limits:
+        start: '2021-12-02'
+        end: -1
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: GEPS7 is the ECCC's contribution to the SubX Project
+    args: 
+      path: '{{ CATALOG_DIR }}/GEPS7.yml'
 
   GEFSv12:
     metadata:
@@ -54,6 +96,12 @@ sources:
       info: https://www.emc.ncep.noaa.gov/users/meg/gefsv12/
       hindcasts: 'Wednesday'
       forecasts: 'Wednesday'
+      hindcast_limits:
+        start: '1989-01-04'
+        end: '2019-08-28' 
+      forecast_limits:
+        start: '2020-09-03'
+        end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: GEFSv12 is the EMC's contribution to the SubX Project
     args: 
@@ -66,6 +114,12 @@ sources:
       info: https://fim.noaa.gov/
       hindcasts: 'Wednesday'
       forecasts: 'Wednesday'
+      hindcast_limits:
+        start: '1999-01-06'
+        end: '2017-06-28' 
+      forecast_limits:
+        start: '2017-08-02'
+        end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: FIMr1p1 is the ECCC's contribution to the SubX Project
     args: 
@@ -78,6 +132,12 @@ sources:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/.NCEP/.CFSv2/
       hindcasts: "blah"
       forecasts: "blah"
+      hindcast_limits:
+        start: '1999-01-01'
+        end: '2017-09-30' 
+      forecast_limits:
+        start: '2017-10-15'
+        end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: CFSv2 is NCEP's contribution to the SubX Project
     args: 
