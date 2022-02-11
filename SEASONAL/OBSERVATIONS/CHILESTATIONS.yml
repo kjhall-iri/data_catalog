@@ -4,7 +4,7 @@ sources:
     metadata:
       id_code: 171
     args:
-      observed: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.prcp/T/{int(lead_high-lead_low)+1}/seasonalAverage/T/%28{targetcenter(target)}%29/VALUES/-999/setmissing_value/{'%5B%5D%5BT%5D' + filetype if filetype == 'cptv10.tsv' else 'data.nc'}
+      observed: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.prcp/T/{int(lead_high-lead_low)+1}/seasonalAverage/T/%28{targetcenter(target)}%29/VALUES/{int(lead_high-lead_low)+1}/mul/-999/setmissing_value/{'%5B%5D%5BT%5D' + filetype if filetype == 'cptv10.tsv' else 'data.nc'}
       units: mm/month
 
   
@@ -14,7 +14,7 @@ sources:
       id_code: 172
     args:
       observed: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.tempX/T/{int(lead_high-lead_low)+1}/seasonalAverage/T/%28{targetcenter(target)}%29/VALUES/-999/setmissing_value/{'%5B%5D%5BT%5D' + filetype if filetype == 'cptv10.tsv' else 'data.nc'}
-      units: mm/month
+      units: degrees Kelvin
 
 
   TMIN:
@@ -23,6 +23,6 @@ sources:
       id_code: 173
     args:
       observed: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.tempN/T/{int(lead_high-lead_low)+1}/seasonalAverage/T/%28{targetcenter(target)}%29/VALUES/-999/setmissing_value/{'%5B%5D%5BT%5D' + filetype if filetype == 'cptv10.tsv' else 'data.nc'}
-      units: mm/month
+      units: degrees Kelvin
 
   
