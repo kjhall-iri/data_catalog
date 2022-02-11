@@ -5,16 +5,13 @@ sources:
     metadata:
       info: https://www.cmcc.it/wp-content/uploads/2020/09/TN0288-csp-09-2020-1.pdf
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.CMCC/.SPSv3p5/
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        start: 729
+        start: '2020-10-01'
         end: -1
-        units: months since 1960-01-01
-        calendar: 360_day
       institution: EuroMediterranean Center for Climate Change (CMCC)
 
     args:
@@ -28,16 +25,13 @@ sources:
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.CMCC/.SPSv3/
       info: https://www.cmcc.it/wp-content/uploads/2017/12/rp0285-csp-10-2017.pdf
       institution: EuroMediterranean Center for Climate Change (CMCC)
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        start: 706
-        end: 728
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '2018-11-01'
+        end: '2020-09-01'
     args:
       path: '{{ CATALOG_DIR }}/CMCCSPS3p0.yml'
 
@@ -47,18 +41,14 @@ sources:
       version: 2.0
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.DWD/.GCFS2p0/
       info: https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html
-      institution: Deutscher Wetterdienst (DWD) 
+      institution: Deutscher Wetterdienst (DWD)
+      dlauth_required: True 
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        start: 706
-        end: 729
-        units: months since 1960-01-01
-        calendar: 360_day
-
+        start: '2018-11-01'
+        end: '2020-10-01'
     driver: intake.catalog.local.YAMLFileCatalog
     args:
       path: '{{ CATALOG_DIR }}/DWDGCFS2p0.yml'
@@ -69,18 +59,14 @@ sources:
       version: 2.1
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.DWD/.GCFS2p1/
       info: https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html
-      institution: Deutscher Wetterdienst (DWD) 
+      institution: Deutscher Wetterdienst (DWD)
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        start: 730
+        start: '2020-11-01'
         end: -1
-        units: months since 1960-01-01
-        calendar: 360_day
-
     driver: intake.catalog.local.YAMLFileCatalog
     args:
       path: '{{ CATALOG_DIR }}/DWDGCFS2p1.yml'
@@ -92,17 +78,14 @@ sources:
       info: https://www.ecmwf.int/en/forecasts/documentation-and-support/long-range
       institution: European Center For Mid-Range Weather Forecasting (ECMWF)
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.ECMWF/.SEAS5/
+      dlauth_required: True
       version: 5.0
       hindcast_limits:
-        start: 252
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1981-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        start: 692
+        start: '2017-09-01'
         end: -1
-        units: months since 1960-01-01
-        calendar: 360_day
     args: 
       path: '{{ CATALOG_DIR }}/ECMWFSEAS5.yml'
 
@@ -112,15 +95,14 @@ sources:
       instituion: Japanese Metorological Agency (JMA)
       info: https://confluence.ecmwf.int/display/CKB/Description+of+cps2-v20150526+C3S+contribution
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.JMA/.CPS2/
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
         units: months since 1960-01-01
         calendar: 360_day
-        start: 729
+        start: '2020-10-01'
         end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     args: 
@@ -130,16 +112,13 @@ sources:
     description: The 7th Long-Range Seasonal Forecasting System from Meteo France
     metadata: 
       institution: Meteo France 
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        units: months since 1960-01-01
-        calendar: 360_day
-        end: 683
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        start: 717
-        end: 737
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '2019-10-01'
+        end: '2021-06-01'
       info: https://confluence.ecmwf.int/display/CKB/Description+of+System7-v20190301+C3S+contribution
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.Meteo_France/.System7/
     driver: intake.catalog.local.YAMLFileCatalog
@@ -148,18 +127,15 @@ sources:
 
   METEOFRANCE8:
     metadata: 
-      institution: Meteo France 
+      institution: Meteo France
+      dlauth_required: True 
       info: https://confluence.ecmwf.int/display/CKB/Description+of+System7-v20190301+C3S+contribution
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.Meteo_France/.System8/
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        units: months since 1960-01-01
-        calendar: 360_day
-        start: 738
+        start: '2021-07-01'
         end: -1
     description: The 8th Long-Range Seasonal Forecasting System from Meteo France
     driver: intake.catalog.local.YAMLFileCatalog
@@ -172,16 +148,13 @@ sources:
       intitution: United Kingdom Meteorological Office (UKMO)
       info: https://confluence.ecmwf.int/display/CKB/UKMO+Forecast+System
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.UKMO/.GloSea5-GC2/.System15/
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        units: months since 1960-01-01
-        calendar: 360_day
-        start: 724
-        end: 733
+        start: '2020-05-01'
+        end: '2021-02-01'
     driver: intake.catalog.local.YAMLFileCatalog
     args: 
       path: '{{ CATALOG_DIR }}/UKMOGLOSEA5.yml'
@@ -192,15 +165,12 @@ sources:
       intitution: United Kingdom Meteorological Office (UKMO)
       info: https://www.metoffice.gov.uk/research/climate/seasonal-to-decadal/gpc-outlooks/user-guide/global-seasonal-forecasting-system-glosea6
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.UKMO/.GloSea6-GC2/.System600/
+      dlauth_required: True
       hindcast_limits:
-        start: 396
-        end: 683
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1993-01-01'
+        end: '2016-12-01'
       forecast_limits:
-        units: months since 1960-01-01
-        calendar: 360_day
-        start: 734
+        start: '2021-03-01'
         end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     args: 

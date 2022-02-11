@@ -4,16 +4,13 @@ sources:
       institution: Environment and Climate Change Canada (ECCC)
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CanCM4i/
       info: https://journals.ametsoc.org/view/journals/wefo/35/4/wafD190259.xml
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 743
+        start: '1980-01-01'
+        end: -1
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 743
+        start: '2019-08-01'
+        end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: CanCM4i couples CCCma’s fourth-generation atmospheric model CanAM4 to CCCma’s CanOM4 ocean component.
     args: 
@@ -24,35 +21,78 @@ sources:
       institution: Environment and Climate Change Canada (ECCC)
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CanSIPSv2/
       info: https://journals.ametsoc.org/view/journals/wefo/35/4/wafD190259.xml
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 743
+        start: '1981-01-01'
+        end: '2021-11-01'
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 743
+        start: '2016-12-01'
+        end: '2021-11-01'
     driver: intake.catalog.local.YAMLFileCatalog
     description: CanSIPSv2 consists of two global coupled models, CanCM4i and GEM-NEMO. CanCM4i applies an improved initialization to the same version of the CanCM4 model used previously in CanSIPSv1 (see section 3). This model is described in detail in Merryfield et al. (2013), and therefore only its most basic aspects are outlined here. On the other hand, GEM-NEMO is a new model introduced to CanSIPSv2 and will be described in detail.
     args: 
       path: '{{ CATALOG_DIR }}/CANSIPSV2.yml'
+
+  GEMNEMO:
+    metadata:
+      institution: Environment and Climate Change Canada (ECCC)
+      info: https://journals.ametsoc.org/view/journals/wefo/35/4/wafD190259.xml
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GEM-NEMO/
+      dlauth_required: False
+      hindcast_limits:
+        start: '1981-01-01'
+        end: '2021-11-01'
+      forecast_limits:
+        start: '2016-12-01'
+        end: '2021-11-01'
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: GEM-NEMO, developed at the Recherche en Prévision Numérique (RPN), is a fully coupled model with the atmospheric component of GEM (Côté et al. 1998) and the ocean component of NEMO (Nucleus for European Modelling of the Ocean, http://www.nemo-ocean.eu
+    args: 
+      path: '{{ CATALOG_DIR }}/GEMNEMO.yml'
+
+  CanSIPSIC3:
+    metadata:
+      institution: Environment and Climate Change Canada (ECCC)
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CanSIPS-IC3/
+      dlauth_required: False
+      hindcast_limits:
+        start: '1980-01-01'
+        end: '2020-12-01'
+      forecast_limits:
+        start: '2021-10-01'
+        end: -1
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: CanSIPSv2 consists of two global coupled models, CanCM4i and GEM-NEMO. CanCM4i applies an improved initialization to the same version of the CanCM4 model used previously in CanSIPSv1 (see section 3). This model is described in detail in Merryfield et al. (2013), and therefore only its most basic aspects are outlined here. On the other hand, GEM-NEMO is a new model introduced to CanSIPSv2 and will be described in detail.
+    args: 
+      path: '{{ CATALOG_DIR }}/CANSIPSIC3.yml'
+
+  GEM5NEMO:
+    metadata:
+      institution: Environment and Climate Change Canada (ECCC)
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CanSIPS-IC3/.GEM5-NEMO/
+      dlauth_required: False
+      hindcast_limits:
+        start: '1980-01-01'
+        end: '2020-12-01'
+      forecast_limits:
+        start: '2021-10-01'
+        end: -1
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: GEM5-NEMO, developed at the Recherche en Prévision Numérique (RPN), is a fully coupled model with the atmospheric component of GEM (Côté et al. 1998) and the ocean component of NEMO (Nucleus for European Modelling of the Ocean, http://www.nemo-ocean.eu
+    args: 
+      path: '{{ CATALOG_DIR }}/GEM5NEMO.yml'
 
   CCSM4:
     metadata:
       institution: University of Miami Rosenstiel School of Marine and Atmospheric Science (RSMAS)
       info: https://climate.rsmas.miami.edu/research/subseasonal-to-seasonal-prediction/index.html
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.COLA-RSMAS-CCSM4/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 264
+        start: '1982-01-01'
         end: -1
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 264
+        start: '1982-01-01'
         end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: Community Climate System Model version 4.0 (CCSM4) experimental climate forecasts of southeastern US precipitation, 2-meter temperature, horizontal (u) winds, evaporation, runoff, and soil moisture on monthly and seasonal time-scales.
@@ -64,16 +104,13 @@ sources:
       institution: Environment and Climate Change Canada (ECCC)
       info: https://weather.gc.ca/saisons/howto_seasonal_coupled_e.html
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CMC1-CanCM3/
-      hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01        
-        start: 252
-        end: 714
+      dlauth_required: False
+      hindcast_limits:    
+        start: '1981-01-01'
+        end: '2019-07-01'
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 714
+        start: '2011-01-01'
+        end: '2019-07-01'
     driver: intake.catalog.local.YAMLFileCatalog
     description: Canadian Climate Model - Replaced by GEM-NEMO
     args: 
@@ -84,56 +121,30 @@ sources:
       institution: Environment and Climate Change Canada (ECCC)
       info: https://www.canada.ca/en/environment-climate-change/services/climate-change/science-research-data/modeling-projections-analysis/centre-modelling-analysis/models/fourth-generation-coupled-global.html
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CMC2-CanCM4/
-      hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 714
+      dlauth_required: False
+      hindcast_limits:    
+        start: '1981-01-01'
+        end: '2019-07-01'
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 714
+        start: '2011-01-01'
+        end: '2019-07-01'
     driver: intake.catalog.local.YAMLFileCatalog
     description: Canadian Climate Model - Replaced by CanCM4i
     args: 
       path: '{{ CATALOG_DIR }}/CMC2CANCM4.yml'
-
-  GEMNEMO:
-    metadata:
-      institution: Environment and Climate Change Canada (ECCC)
-      info: https://journals.ametsoc.org/view/journals/wefo/35/4/wafD190259.xml
-      iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GEM-NEMO/
-      hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 743
-      forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 252
-        end: 743
-    driver: intake.catalog.local.YAMLFileCatalog
-    description: GEM-NEMO, developed at the Recherche en Prévision Numérique (RPN), is a fully coupled model with the atmospheric component of GEM (Côté et al. 1998) and the ocean component of NEMO (Nucleus for European Modelling of the Ocean, http://www.nemo-ocean.eu
-    args: 
-      path: '{{ CATALOG_DIR }}/GEMNEMO.yml'
 
   AER04:
     metadata:
       institution: Geophysical Fluid Dynamics Laboratory (GFDL)
       info: https://www.gfdl.noaa.gov/climate-models/
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GFDL-CM2p1-aer04/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 264
-        end: 732
+        start: '1982-01-01'
+        end: '2021-01-01'
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 264
-        end: 732
+        start: '1982-01-01'
+        end: '2021-01-01'
     driver: intake.catalog.local.YAMLFileCatalog
     description: GFDL’s CM2.1 climate model, incorporating 1o ocean and 2o atmospheric components, was developed to produce output and science for the IPCC 4th assessment report. When evaluated over a broad suite of metrics this model was found to produce a high quality simulation of the present-day climate and its variability. In addition to other applications, GFDL uses the CM2.1 model for experimental seasonal predictions as part of the North American Multi-Model Ensemble (NMME).
     args: 
@@ -144,16 +155,13 @@ sources:
       institution: Geophysical Fluid Dynamics Laboratory (GFDL)
       info: https://www.gfdl.noaa.gov/climate-models/
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GFDL-CM2p5-FLOR-B01/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 242
-        end: 732
+        start: '1980-03-01'
+        end: '2021-01-01'
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 242
-        end: 732
+        start: '1980-03-01'
+        end: '2021-01-01'
     driver: intake.catalog.local.YAMLFileCatalog
     description: The GFDL Forecast-oriented Low Ocean Resolution version of CM2.5 (FLOR) model is a descendent of the CM2.5 model and CM2.1 model. The FLOR model incorporates the higher horizontal resolution in the atmosphere and land, higher vertical resolution in the atmosphere, and significantly improved land model (LM3) from CM2.5. The FLOR model also uses the relatively low-resolution ocean and sea ice components of CM2.1. These choices create a coupled model that is relatively computationally efficient, but can be used to address problems of regional climate and extremes.
     args: 
@@ -164,16 +172,13 @@ sources:
       institution: Geophysical Fluid Dynamics Laboratory (GFDL)
       info: https://www.gfdl.noaa.gov/climate-models/
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GFDL-CM2p5-FLOR-A06/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 242
-        end: 732
+        start: '1980-03-01'
+        end: '2021-01-01'
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 242
-        end: 732
+        start: '1980-03-01'
+        end: '2021-01-01'
     driver: intake.catalog.local.YAMLFileCatalog
     description: The GFDL Forecast-oriented Low Ocean Resolution version of CM2.5 (FLOR) model is a descendent of the CM2.5 model and CM2.1 model. The FLOR model incorporates the higher horizontal resolution in the atmosphere and land, higher vertical resolution in the atmosphere, and significantly improved land model (LM3) from CM2.5. The FLOR model also uses the relatively low-resolution ocean and sea ice components of CM2.1. These choices create a coupled model that is relatively computationally efficient, but can be used to address problems of regional climate and extremes.
     args: 
@@ -184,15 +189,12 @@ sources:
       institution: Geophysical Fluid Dynamics Laboratory (GFDL)
       info: https://www.gfdl.noaa.gov/spear/
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.GFDL-SPEAR/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 372
+        start: '1991-01-01'
         end: -1
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 372
+        start: '2020-12-01'
         end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: SPEAR models were developed as a next generation GFDL modeling system for seasonal to multidecadal prediction and projection. The SPEAR models share many components with the recently developed GFDL CM4 model but with configuration and physical parameterization choices in SPEAR geared toward physical climate prediction and projection on seasonal to decadal time scales.
@@ -204,15 +206,12 @@ sources:
       institution: National Aeronautics & Space Administration (NASA) Global Modeling and Assimilation Office (GMAO) 
       info: https://gmao.gsfc.nasa.gov/cgi-bin/products/climateforecasts/geos5/S2S_2/index.cgi
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.NASA-GEOSS2S/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 253
+        start: '1981-02-01'
         end: -1
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 253
+        start: '2017-02-01'
         end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: The NASA GMAO seasonal forecasts are produced with the Goddard Earth Observing System (GEOS) Atmosphere-Ocean General Circulation Model and Data Assimilation System Version S2S_2.1. The new system replaces version S2S-1_0 described in Borovikov et al (2017), and includes upgrades to many components of the system. The atmospheric model includes an upgrade from a pre-MERRA-2 version running on the latitude-longitude grid at ~1 degree resolution to a current version running on the cubed sphere grid at approximately 1/2 degree resolution. The important developments are related to the dynamical core (Putman et al., 2011), the moist physics (“two-moment microphysics” of Barahona et al., 2014) and the cryosphere (Cullather et al., 2014). As in the previous GMAO S2S system, the land model is that of Koster et al (2000).
@@ -224,15 +223,12 @@ sources:
       institution: National Oceanic and Atmospheric Administration (NOAA) National Center for Envrionmental Prediction (NCEP)
       info: https://www.cpc.ncep.noaa.gov/products/CFSv2/CFSv2_body.html
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.NCEP-CFSv2/
+      dlauth_required: False
       hindcast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 264
+        start: '1982-01-01'
         end: -1
       forecast_limits:
-        calendar: 360_day
-        units: months since 1960-01-01
-        start: 264
+        start: '2011-04-01'
         end: -1
     driver: intake.catalog.local.YAMLFileCatalog
     description: The second version of the NCEP Climate Forecast System (CFSv2) was made operational at NCEP in March 2011. This version has upgrades to nearly all aspects of the data assimilation and forecast model components of the system. A coupled reanalysis was made over a 32-yr period (1979–2010), which provided the initial conditions to carry out a comprehensive reforecast over 29 years (1982–2010). This was done to obtain consistent and stable calibrations, as well as skill estimates for the operational subseasonal and seasonal predictions at NCEP with CFSv2. The operational implementation of the full system ensures a continuity of the climate record and provides a valuable up-to-date dataset to study many aspects of predictability on the seasonal and subseasonal scales. 
