@@ -19,6 +19,7 @@ sources:
     metadata: 
       iri: https://iri.columbia.edu/resources/enacts/
       info: datalibrary.bmd.gov.bd
+      disclaimer: This dataset is downloaded through unencrypted http - we take no responsibility for the contents you receive, be they malware or empty data files. 
       institution: Bandladesh Meteorological Department 
       dlauth_required: False
       limits:
