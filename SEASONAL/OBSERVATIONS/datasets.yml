@@ -5,12 +5,12 @@ sources:
     metadata:
       iri: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.prcp/
       info: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.prcp/
+      dlauth_required: False
       institution: ACToday - Chile
+      dlauth_required: False
       limits:
-        units: days since 1960-01-01
-        calendar: standard
-        start: 7671
-        end: 21154
+        start: '1981-01-01'
+        end: '2017-12-01'
     args:
       path: '{{ CATALOG_DIR }}/CHILESTATIONS.yml'
   
@@ -21,26 +21,24 @@ sources:
       iri: https://iri.columbia.edu/resources/enacts/
       info: datalibrary.bmd.gov.bd
       institution: Bandladesh Meteorological Department 
+      dlauth_required: False
       limits:
-        start: 7671
+        start: '1981-01-01'
         end: -1
-        units: days since 1960-01-01
-        calendar: standard
     args:
-      path: '{{ CATALOG_DIR }}/ENACTSBD_IRI.yml'
+      path: '{{ CATALOG_DIR }}/ENACTSBD.yml'
       
   UCSB:
     driver: intake.catalog.local.YAMLFileCatalog
     description: University of California at Santa Barbara climate observations datasets
     metadata: 
-      iri: https://iri.columbia.edu/SOURCES/.UCSB/
+      iri: https://iridl.ldeo.columbia.edu/SOURCES/.UCSB/
       info: https://www.chc.ucsb.edu/data/chirps
-      institution: UCSB
+      institution: University of California at Santa Barbara
+      dlauth_required: False
       limits:
-        start: 252
+        start: '1981-01-01'
         end: -1
-        units: months since 1960-01-01
-        calendar: standard
     args:
       path: '{{ CATALOG_DIR }}/UCSB.yml'
 
@@ -50,11 +48,10 @@ sources:
     metadata:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/
       info: https://www.cpc.ncep.noaa.gov/
+      dlauth_required: False
       institution:  National Oceanic & Atmospheric Administratino (NOAA) National Center for Environmental Prediction (NCEP) Climate Prediction Center (CPC)
       limits:
-        units: months since 1960-01-01
-        calendar: 360_day
-        start: 228
+        start: '1979-01-01'
         end: -1
     args:
       path: '{{ CATALOG_DIR }}/CPC.yml'
@@ -65,12 +62,11 @@ sources:
     metadata:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CPC-CMAP-URD/prate
       info: https://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/.CPC-CMAP-URD/prate/
+      dlauth_required: False
       institution:  National Oceanic & Atmospheric Administratino (NOAA) National Center for Environmental Prediction (NCEP) Climate Prediction Center (CPC)
       limits:
-        start: 264
-        end: 659
-        units: months since 1960-01-01
-        calendar: 360_day
+        start: '1982-01-01'
+        end: '2014-12-01'
     args:
       path: '{{ CATALOG_DIR }}/CPCCMAPURD.yml'
   
@@ -81,11 +77,10 @@ sources:
       iri: https://iridl.ldeo.columbia.edu/SOURCES/.NASA/.GES-DAAC/.TRMM_L3/.TRMM_3B42/.v7/.daily/.precipitation/
       info: https://disc.gsfc.nasa.gov/information?page=1&project=TRMM,GPM&keywords=precipitation
       institution: National Aeronautics & Space Administration (NASA)
+      dlauth_required: False
       limits: 
-        start: 0
-        end: 6359
-        units: days since 1998-01-01
-        calendar: standard
+        start: '1988-01-01'
+        end: '2015-05-31'
     args:
       path: '{{ CATALOG_DIR }}/TRMM.yml'
 
@@ -96,10 +91,9 @@ sources:
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCDC/.ERSST/.version5/.sst/
       info: https://journals.ametsoc.org/view/journals/clim/30/20/jcli-d-16-0836.1.xml
       institution: NOAA NCDC
+      dlauth_required: False
       limits: 
-        start: -1272
+        start: '1854-01-01'
         end: -1
-        units: months since 1960-01-01
-        calendar: 360_day
     args:
       path: '{{ CATALOG_DIR }}/ERSSTV5.yml'
