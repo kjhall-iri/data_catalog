@@ -7,7 +7,6 @@ sources:
       info: http://iridl.ldeo.columbia.edu/home/.xchourio/.ACToday/.CHL/.prcp/
       dlauth_required: False
       institution: ACToday - Chile
-      dlauth_required: False
       limits:
         start: '1981-01-01'
         end: '2017-12-01'
