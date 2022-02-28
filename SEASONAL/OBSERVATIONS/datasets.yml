@@ -65,8 +65,8 @@ sources:
       dlauth_required: False
       institution:  National Oceanic & Atmospheric Administratino (NOAA) National Center for Environmental Prediction (NCEP) Climate Prediction Center (CPC)
       limits:
-        start: '1982-01-01'
-        end: '2014-12-01'
+        start: '1979-01-01'
+        end: '2021-08-01'
     args:
       path: '{{ CATALOG_DIR }}/CPCCMAPURD.yml'
   
