@@ -1,0 +1,137 @@
+sources: 
+  
+  BANGLADESH:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Enhancing National Climate Services (ENACTS) Dataset for BANGLADESH. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+    metadata: 
+      iri: https://iri.columbia.edu/resources/enacts/
+      info: datalibrary.bmd.gov.bd
+      disclaimer: This dataset is downloaded through unencrypted http - we take no responsibility for the contents you receive, be they malware or empty data files. 
+      institution: Bandladesh Meteorological Department 
+      dlauth_required: False
+      limits:
+        start: '1981-01-01'
+        end: -1
+    args:
+      path: '{{ CATALOG_DIR }}/BANGLADESH.yml'
+
+  COLOMBIA:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Enhancing National Climate Services (ENACTS) Dataset for COLOMBIA. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+    metadata: 
+      iri: https://iri.columbia.edu/resources/enacts/
+      info: http://www.ideam.gov.co/
+      institution: Instituto de Hidrología, Meteorología y Estudios Ambientales 
+      dlauth_required: False
+      limits:
+        start: '1981-01-01'
+        end: '2016-12-31'
+    args:
+      path: '{{ CATALOG_DIR }}/COLOMBIA.yml'
+      
+  #ETHIOPIA:
+   # driver: intake.catalog.local.YAMLFileCatalog
+   # description: Enhancing National Climate Services (ENACTS) Dataset for ETHIOPIA. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+   # metadata: 
+   #   iri: https://iri.columbia.edu/resources/enacts/
+   #   info: http://213.55.84.78/
+   #   institution: Ethiopia NMA
+   #   ldap_required: True  
+   #   dlauth_required: True
+   #   limits:
+   #     start: '1981-01-01'
+   #     end: '2018-12-01'
+   # args:
+   #   path: '{{ CATALOG_DIR }}/ETHIOPIA.yml'
+
+  GAMBIA:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Enhancing National Climate Services (ENACTS) Dataset for GAMBIA. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+    metadata: 
+      iri: https://iri.columbia.edu/resources/enacts/
+      dlauth_required: False
+      limits:
+        start: '1983-01-01'
+        end: '2011-12-01'
+    args:
+      path: '{{ CATALOG_DIR }}/GAMBIA.yml'
+    
+  GUATEMALA:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Enhancing National Climate Services (ENACTS) Dataset for GUATEMALA. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+    metadata: 
+      iri: https://iri.columbia.edu/resources/enacts/
+      info: https://insivumeh.gob.gt/
+      dlauth_required: False
+      limits:
+        start: '1981-01-01'
+        end: '2018-12-01'
+    args:
+      path: '{{ CATALOG_DIR }}/GUATEMALA.yml'
+
+  ICPAC:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Enhancing National Climate Services (ENACTS) Dataset for ICPAC. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+    metadata: 
+      iri: https://iri.columbia.edu/resources/enacts/
+      info: http://digilib.icpac.net/
+      dlauth_required: False
+      limits:
+        start: '1981-01-01'
+        end: '2020-12-01'
+    args:
+      path: '{{ CATALOG_DIR }}/ICPAC.yml'
+
+  #RWANDA:
+  #  driver: intake.catalog.local.YAMLFileCatalog
+  #  description: Enhancing National Climate Services (ENACTS) Dataset for RWANDA. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+  #  metadata: 
+  #    iri: https://iri.columbia.edu/resources/enacts/
+  #    info: meteorwanda.gov.rw
+  #    ldap_required: True
+  #    dlauth_required: False
+  #    limits:
+  #      start: '1981-01-01'
+  #      end: '2017-12-01'
+  #  args:
+  #    path: '{{ CATALOG_DIR }}/RWANDA.yml'
+
+ # SENEGAL:
+  #  driver: intake.catalog.local.YAMLFileCatalog
+   # description: Enhancing National Climate Services (ENACTS) Dataset for SENEGAL. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+   # metadata: 
+   #   iri: https://iri.columbia.edu/resources/enacts/
+   #   info: http://www.anacim.sn/
+   #   dlauth_required: True
+   #   limits:
+   #     start: '1981-01-01'
+   #     end: '2017-12-01'
+    #args:
+    #  path: '{{ CATALOG_DIR }}/SENEGAL.yml'
+
+  #TANZANIA:
+  #  driver: intake.catalog.local.YAMLFileCatalog
+  #  description: Enhancing National Climate Services (ENACTS) Dataset for TANZANIA. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+  #  metadata: 
+  #    iri: https://iri.columbia.edu/resources/enacts/
+  #    dlauth_required: False
+  #    ldap_required: True
+  #    limits:
+  #      start: '1981-01-01'
+  #      end: '2017-12-01'
+  #  args:
+  #    path: '{{ CATALOG_DIR }}/SENEGAL.yml'
+
+
+  VIETNAM:
+    driver: intake.catalog.local.YAMLFileCatalog
+    description: Enhancing National Climate Services (ENACTS) Dataset for VIETNAM. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
+    metadata: 
+      iri: https://iri.columbia.edu/resources/enacts/
+      info: https://nchmf.gov.vn/KttvsiteE/en-US/2/index.html
+      dlauth_required: True
+      limits:
+        start: '1981-01-01'
+        end: '2019-12-01'
+    args:
+      path: '{{ CATALOG_DIR }}/VIETNAM.yml'

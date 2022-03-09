@@ -13,20 +13,11 @@ sources:
     args:
       path: '{{ CATALOG_DIR }}/CHILESTATIONS.yml'
   
-  ENACTSBD:
+  ENACTS:
     driver: intake.catalog.local.YAMLFileCatalog
-    description: Enhancing National Climate Services (ENACTS) Dataset for Bangladesh. The Enhancing National Climate Services initiative, or ENACTS, is led by the International Research Institute for Climate and Society and is a unique, multi-faceted initiative designed to bring climate knowledge into national decision making by improving availability, access to, and use of climate information.
-    metadata: 
-      iri: https://iri.columbia.edu/resources/enacts/
-      info: datalibrary.bmd.gov.bd
-      disclaimer: This dataset is downloaded through unencrypted http - we take no responsibility for the contents you receive, be they malware or empty data files. 
-      institution: Bandladesh Meteorological Department 
-      dlauth_required: False
-      limits:
-        start: '1981-01-01'
-        end: -1
+    description: Enhancing National Climate Services initiative (ENACTS) 
     args:
-      path: '{{ CATALOG_DIR }}/ENACTSBD.yml'
+      path: '{{ CATALOG_DIR }}/ENACTS/datasets.yml'
       
   UCSB:
     driver: intake.catalog.local.YAMLFileCatalog
@@ -41,20 +32,6 @@ sources:
         end: -1
     args:
       path: '{{ CATALOG_DIR }}/UCSB.yml'
-
-  #CPC:
-  #  driver: intake.catalog.local.YAMLFileCatalog
-  #  description: NOAA NCEP CPC Observations Data
-  #  metadata:
-  #    iri: https://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/
-  #    info: https://www.cpc.ncep.noaa.gov/
-  #    dlauth_required: False
-  #    institution:  National Oceanic & Atmospheric Administratino (NOAA) National Center for Environmental Prediction (NCEP) Climate Prediction Center (CPC)
-  #    limits:
-  #      start: '1979-01-01'
-  #      end: -1
-  #  args:
-  #    path: '{{ CATALOG_DIR }}/CPC.yml'
   
   CPCCMAPURD:
     driver: intake.catalog.local.YAMLFileCatalog
