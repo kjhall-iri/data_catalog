@@ -9,6 +9,7 @@ sources:
       disclaimer: This dataset is downloaded through unencrypted http - we take no responsibility for the contents you receive, be they malware or empty data files. 
       institution: Bandladesh Meteorological Department 
       dlauth_required: False
+      extent: [27.025, 20.375, 93.025,  87.675 ] #NSEW
       limits:
         start: '1981-01-01'
         end: -1
@@ -22,6 +23,7 @@ sources:
       iri: https://iri.columbia.edu/resources/enacts/
       info: http://www.ideam.gov.co/
       institution: Instituto de Hidrología, Meteorología y Estudios Ambientales 
+      extent: [15, -5, -65, -80] #NSEW
       dlauth_required: False
       limits:
         start: '1981-01-01'
@@ -50,6 +52,7 @@ sources:
     metadata: 
       iri: https://iri.columbia.edu/resources/enacts/
       dlauth_required: False
+      extent: [-13.75625, -16.98125, 13.88125, 13.01875]
       limits:
         start: '1983-01-01'
         end: '2011-12-01'
@@ -62,6 +65,7 @@ sources:
     metadata: 
       iri: https://iri.columbia.edu/resources/enacts/
       info: https://insivumeh.gob.gt/
+      extent: [18.5, 13.5, -88, -92.5]
       dlauth_required: False
       limits:
         start: '1981-01-01'
@@ -76,6 +80,7 @@ sources:
       iri: https://iri.columbia.edu/resources/enacts/
       info: http://digilib.icpac.net/
       dlauth_required: False
+      extent: [38.5, 19.5, 59.5, 14.5]
       limits:
         start: '1981-01-01'
         end: '2020-12-01'
@@ -130,6 +135,7 @@ sources:
       iri: https://iri.columbia.edu/resources/enacts/
       info: https://nchmf.gov.vn/KttvsiteE/en-US/2/index.html
       dlauth_required: True
+      extent: [23.475, 8.025, 109.475, 102.025 ]
       limits:
         start: '1981-01-01'
         end: '2019-12-01'
