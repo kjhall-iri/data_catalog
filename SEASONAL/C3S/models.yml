@@ -5,7 +5,7 @@ sources:
     metadata:
       info: https://www.cmcc.it/wp-content/uploads/2020/09/TN0288-csp-09-2020-1.pdf
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.CMCC/.SPSv3p5/
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -25,7 +25,7 @@ sources:
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.CMCC/.SPSv3/
       info: https://www.cmcc.it/wp-content/uploads/2017/12/rp0285-csp-10-2017.pdf
       institution: EuroMediterranean Center for Climate Change (CMCC)
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -42,7 +42,7 @@ sources:
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.DWD/.GCFS2p0/
       info: https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html
       institution: Deutscher Wetterdienst (DWD)
-      dlauth_required: True 
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -60,7 +60,7 @@ sources:
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.DWD/.GCFS2p1/
       info: https://www.dwd.de/EN/ourservices/seasonals_forecasts/start.html
       institution: Deutscher Wetterdienst (DWD)
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -78,7 +78,7 @@ sources:
       info: https://www.ecmwf.int/en/forecasts/documentation-and-support/long-range
       institution: European Center For Mid-Range Weather Forecasting (ECMWF)
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.ECMWF/.SEAS5/
-      dlauth_required: True
+      dlauth_required: copernicuscds
       version: 5.0
       hindcast_limits:
         start: '1981-01-01'
@@ -95,7 +95,7 @@ sources:
       instituion: Japanese Metorological Agency (JMA)
       info: https://confluence.ecmwf.int/display/CKB/Description+of+cps2-v20150526+C3S+contribution
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.JMA/.CPS2/
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -112,7 +112,7 @@ sources:
     description: The 7th Long-Range Seasonal Forecasting System from Meteo France
     metadata: 
       institution: Meteo France 
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -128,7 +128,7 @@ sources:
   METEOFRANCE8:
     metadata: 
       institution: Meteo France
-      dlauth_required: True 
+      dlauth_required: copernicuscds
       info: https://confluence.ecmwf.int/display/CKB/Description+of+System7-v20190301+C3S+contribution
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.C3S/.Meteo_France/.System8/
       hindcast_limits:
@@ -148,7 +148,7 @@ sources:
       intitution: United Kingdom Meteorological Office (UKMO)
       info: https://confluence.ecmwf.int/display/CKB/UKMO+Forecast+System
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.UKMO/.GloSea5-GC2/.System15/
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
@@ -165,7 +165,7 @@ sources:
       intitution: United Kingdom Meteorological Office (UKMO)
       info: https://www.metoffice.gov.uk/research/climate/seasonal-to-decadal/gpc-outlooks/user-guide/global-seasonal-forecasting-system-glosea6
       iri: http://iridl.ldeo.columbia.edu/SOURCES/.EU/.Copernicus/.CDS/.UKMO/.GloSea6-GC2/.System600/
-      dlauth_required: True
+      dlauth_required: copernicuscds
       hindcast_limits:
         start: '1993-01-01'
         end: '2016-12-01'
