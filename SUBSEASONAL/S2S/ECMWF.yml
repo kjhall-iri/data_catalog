@@ -3,14 +3,16 @@ sources:
     driver: ecmwfdriver
     hindcast_url: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.reforecast/.perturbed/.sfc_precip/.tp/
     forecast_url: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.forecast/.perturbed/.sfc_precip/.tp/
-  
+    units: mm
+    
   T2M: 
     driver: ecmwfdriver
     hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.reforecast/.perturbed/.sfc_temperature/.skt/
     forecast: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.forecast/.perturbed/.sfc_temperature/.skt/
+    units: degrees_kelvin
 
   GPH:
     driver: ecmwfdriver
     hindcast: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.reforecast/.perturbed/.pressure_level_gh/.gh/
     forecast: https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/.ECMF/.forecast/.perturbed/.pressure_level_gh/.gh/
-   
+    units: meters
